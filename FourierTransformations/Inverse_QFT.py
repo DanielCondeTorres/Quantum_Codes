@@ -35,3 +35,17 @@ B = Operator(qc_builtin).data
 print("Max diff:", np.max(np.abs(A - B)))
 print("Coinciden?", np.allclose(A, B, atol=1e-8))
 print(A)
+
+
+qft_matrix = B
+# Cuenta entradas reales puras
+real_entries = np.isclose(np.imag(qft_matrix), 0)
+imag_entries = np.isclose(np.real(qft_matrix), 0)
+
+# Reales puros: imag = 0
+num_real = np.sum(real_entries & ~imag_entries)
+print(f"Number of purely real entries: {num_real}")
+
+# Imaginarios puros: real = 0
+num_imag = np.sum(imag_entries & ~real_entries)
+print(f"Number of purely imaginary entries: {num_imag}")
