@@ -23,3 +23,5 @@ qubo
 # Solución con un quantum annealing
 anneal_res = qubovert.sim.anneal_pubo(-qubo, num_anneals=1000)
 print('Solucion: ',anneal_res.best.state)
+print('Al ejecutar en un ordenador clásico no puede suceder el efecto tunel y se va a quedar estancado en un mínimo local')
+print('D-Wave annealers dará la solución correcta por ejemplo')
