@@ -27,7 +27,7 @@ for i in range(size):
 # Añadimos el primer bloque de la función objetivo: maximizar el número de reinas
 for i in range(size):
     for j in range(size):
-        Q[(f"x_{i}_{j}",)] = -1  # Queremos tantas reinas como sea posible
+        Q[(f"x_{i}_{j}",)] = -1  # Queremos tantas reinas como sea posible por eso -1, con un +1 añadiria menos reinas
 
 # Incluimos las restricciones para que no se ataquen entre sí
 for i1 in range(size):
