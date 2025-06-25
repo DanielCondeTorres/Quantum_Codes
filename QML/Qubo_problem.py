@@ -20,3 +20,6 @@ qubo[("x4","x5")] = -2
 qubo[("x2","x5")] = -2
 qubo[("x3","x4")] = -2
 qubo
+# Solución con un quantum annealing
+anneal_res = qubovert.sim.anneal_pubo(-qubo, num_anneals=1000)
+print('Solucion: ',anneal_res.best.state)
