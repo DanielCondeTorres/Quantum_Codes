@@ -47,3 +47,6 @@ print("Total weight:", total_weight)
 
 
 # Con annealer: 
+# Solución con un quantum annealing
+anneal_res = qubovert.sim.anneal_pubo(-qubo, num_anneals=1000)
+print('Solucion: ',anneal_res.best.state)
