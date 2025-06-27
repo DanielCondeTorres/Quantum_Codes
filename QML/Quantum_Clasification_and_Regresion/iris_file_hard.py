@@ -110,7 +110,7 @@ print(model.summary())
 # MODEL COMPILATION AND TRAINING
 # ======================================
 opt = tf.keras.optimizers.Adam(learning_rate=0.01)
-model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=["accuracy"])
+model.compile(loss='mse', optimizer=opt, metrics=["accuracy"])
 history = model.fit(X_train, trainy, validation_data=(X_test, testy), epochs=30, batch_size=5)
 
 # ======================================
