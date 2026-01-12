@@ -53,7 +53,7 @@ ax2.spines['right'].set_color(COLOR_PROB)
 ax2.spines['right'].set_linewidth(2)
 
 # --- ELEMENTOS ---
-line_phase, = ax1.plot([], [], color=COLOR_PHASE, lw=2, linestyle='--', alpha=0.7, label='Other States (Phase measure)')
+line_phase, = ax1.plot([], [], color=COLOR_PHASE, lw=2, linestyle='--', alpha=0.7, label='Phase measure')
 dots_phase, = ax1.plot([], [], 'o', color=COLOR_PHASE, markersize=6, alpha=0.7)
 
 line_prob, = ax2.plot([], [], color=COLOR_PROB, lw=3, label='Optimal Solution (Probability)')
